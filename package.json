@@ -1,0 +1,21 @@
+{
+  "name": "kuc-js",
+  "version": "0.0.1",
+  "description": "A prototype of kintone UI components",
+  "scripts": {
+    "start": "parcel examples/src/index.html --out-dir examples/dist",
+    "build": "parcel build src/index.ts --global kuc --out-file kuc",
+    "clean-examples": "rimraf ./examples/dist",
+    "build-examples": "npm run clean-examples && parcel build examples/src/index.html --out-dir examples/dist --public-url ./",
+    "publish-examples": "gh-pages -d examples/dist"
+  },
+  "keywords": [],
+  "author": "Nguyen Xuan Huy",
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "parcel-bundler": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.5"
+  }
+}
